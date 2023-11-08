@@ -51,21 +51,21 @@
 
 <div class="jumbotron text-center">
   <h1>Contribute to Organizational Privacy and Contingency Plans</h1> 
-  <p style="color: lime;">This site powered by 12345 John in 2023</p> 
+  <p style="color: lime;" id="msg">This site powered by 12345 John in 2023</p> 
   <div class="form-group row">
     <div class="col-xs-3"> 
     </div>
     <div class="col-xs-6">
-        <form>
-            <div class="input-group">
-              <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-              <div class="input-group-btn">
-                <!-- <a href="subscrib.html" target="blank"><button type="button" class="btn btn-danger">Subscribe</button></a>  -->
-                <a href="mailto:wellsjohn220@gmail.com?subject=subscribe ictsolution&body=Please input yuor request here!">
-                  <button type="button" class="btn btn-danger">Subscribe</button></a>
-              </div>
+       <form name="submit-to-google-sheet">
+          <div class="input-group">
+            <input type="email" name="Email" class="form-control" size="50" placeholder="Email Address" required>
+            <div class="input-group-btn">
+              <button type="submit" class="btn btn-danger"> 
+              <span class="glyphicon glyphicon-envelope"></span>&nbsp;Subscribe</button>
             </div>
-        </form>
+          </div>
+      </form>
+
     </div>
     <div class="col-xs-3">     
     </div>
@@ -93,8 +93,12 @@
          <!--   <a href="download/XXXXX_COPCP Assessment Task 1.docx" download>Download Assessment One</a>  || -->
         </li>
         <li style="display: inline">
-         <a href="/copcp/download/XXXXX_COPCP Assessment Task 2.docx" download>Download Assessment Two</a> 
-         <!--  <a href="download/XXXXX_COPCP Assessment Task 2.docx" download>Download Assessment Two</a>        </li>   -->      
+         <a href="/copcp/download/XXXXX_COPCP Assessment Task 2.docx" download>Download Assessment Two</a> ||
+         <!--  <a href="download/XXXXX_COPCP Assessment Task 2.docx" download>Download Assessment Two</a>        </li>   -->   
+         <li style="display: inline">
+          <a href="https://docs.google.com/spreadsheets/d/18GMCsbwWRpe8zONp7gttIe597fj_C70twj6fek1TgGM/edit?usp=sharing" target="_blank">Check Subscribe</a>  ||
+        </li>        
+        
       </ul>    
       
      <h2> <span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;IDENTIFYING CRITICAL SYSTEM</h2>
@@ -579,7 +583,7 @@
           <h1>Protection</h1>
         </div>
         <div class="panel-body">
-          <img src="https://www.managedsolution.com/wp-content/uploads/2018/09/bigstock-Password-Input-On-Blurred-Back-236308780-1920x1282.jpg"
+          <img src="https://clikcloud.com/wp-content/uploads/2015/06/data-breach.jpg"
           class="img-size img-thumbnail" alt="cute cat" class="img-thumbnail" />
         </div>
         <div class="panel-footer">
@@ -744,4 +748,22 @@
 </body>
 <!-- Load external JavaScript -->
 <script src="scripts.js"></script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxbwH6kCXKuDb-0kyGG5H8DPeK79duCnUcM-7XK5IPQyZUW6AvNUW-H1lSG_e7Yqls/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")  
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+          msg.innerHTML = "Thank you For Subscribing My Site by 12345 John"
+          setTimeout(function(){
+              msg.innerHTML = "This site powered by 12345 John in 2023"
+          }, 5000)
+          form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })  
+</script>
 </html>
