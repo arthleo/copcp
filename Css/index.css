@@ -1,7 +1,7 @@
   body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
-    color: #00eeff;
+    color: #58d19f;
   }
   h2 {
     font-size: 24px;
@@ -18,7 +18,7 @@
     margin-bottom: 30px;
   }  
   .jumbotron {
-    background: linear-gradient(to top, #0000ff 0%, #ffffff 100%);
+    background: linear-gradient(to top, #58d19f 25%, #ffffff 75%);
     color: #fff;
     padding: 100px 25px;
     font-family: Montserrat, sans-serif;
@@ -50,13 +50,13 @@
   }
   .carousel-control.right, .carousel-control.left {
     background-image: none;
-    color: #00ffb3;
+    color: #58d19f;
   }
   .carousel-indicators li {
-    border-color: #00ffb3;
+    border-color: #58d19f;
   }
   .carousel-indicators li.active {
-    background-color: #00ffb3;
+    background-color: #58d19f;
   }
   .item h4 {
     font-size: 19px;
@@ -69,7 +69,7 @@
     font-style: normal;
   }
   .panel {
-    border: 1px solid #00ffb3; 
+    border: 1px solid #58d19f; 
     border-radius:0 !important;
     transition: box-shadow 0.5s;
   }
@@ -77,12 +77,12 @@
     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
   }
   .panel-footer .btn:hover {
-    border: 1px solid #00ffb3;
+    border: 1px solid #58d19f;
     background-color: #fff !important;
-    color: #00ffb3;
+    color: #58d19f;
   }
   .panel-heading {
-    color: #fff !important;
+    color: #58d19f !important;
     background: linear-gradient(to top, #0000ff 0%, #ffffff 100%);
     padding: 10px 25px;
     border-bottom: 1px solid transparent;
@@ -103,7 +103,7 @@
   }
   .panel-footer .btn {
     margin: 15px 0;
-    background-color: #00ffb3;
+    background-color: #58d19f;
     color: #fff;
   }
   .navbar {
@@ -121,12 +121,12 @@
     color: #fff !important;
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #00ffb3 !important;
+    color: #58d19f !important;
     font-weight: bold;
-    background-color: #fff !important;
+    background-color: #58d19f !important;
   }
   .navbar-nav li a:hover, .navbar-nav li.active a:hover {
-    color: #00ffdd !important;
+    color: #58d19f !important;
     font-weight: bolder;
   }
   .navbar-default .navbar-toggle {
@@ -136,7 +136,7 @@
   footer .glyphicon {
     font-size: 20px;
     margin-bottom: 20px;
-    color: #00ffb3;
+    color: #58d19f;
   }
   footer p {
     color: blue;
