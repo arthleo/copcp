@@ -761,7 +761,7 @@
 <!-- Load external JavaScript -->
 <script src="scripts.js"></script>
 <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxbwH6kCXKuDb-0kyGG5H8DPeK79duCnUcM-7XK5IPQyZUW6AvNUW-H1lSG_e7Yqls/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwVj1KZd5m11tqEEtkHu-DH2VdtEBepuSqi32vHzLLDSVQ6Sipi8YUIMP1p41NTwO3L/exec'
   const form = document.forms['submit-to-google-sheet']
   const msg = document.getElementById("msg")  
 
@@ -773,9 +773,9 @@
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
-          msg.innerHTML = "Thank you For Subscribing My Site by 12345 John"
+          msg.innerHTML = "Thank you for subscribing!"
           setTimeout(function(){
-              msg.innerHTML = "This site powered by 12345 John in 2023"
+              msg.innerHTML = "Powered By Arthur Leonard"
           }, 5000)
           form.reset()
       })
