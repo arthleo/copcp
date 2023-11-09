@@ -96,7 +96,7 @@
          <a href="/copcp/download/XXXXX_COPCP Assessment Task 2.docx" download>Download Assessment Two</a> ||
          <!--  <a href="download/XXXXX_COPCP Assessment Task 2.docx" download>Download Assessment Two</a>        </li>   -->   
          <li style="display: inline">
-          <a href="https://docs.google.com/spreadsheets/d/18GMCsbwWRpe8zONp7gttIe597fj_C70twj6fek1TgGM/edit?usp=sharing" target="_blank">Check Subscribe</a>  ||
+          <a href="https://docs.google.com/spreadsheets/d/1FdGXBWErc3bKPVSZDsMfwpi9f3esHxsCvx8uaES-mbI/edit?usp=sharing" target="_blank">Check Subscribe Register</a>  ||
         </li>        
         
       </ul>    
@@ -707,29 +707,41 @@
 
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
+  <h2 class="text-center" id="msg2">CONTACT</h2>
   <div class="row">
     <div class="col-sm-5">
       <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> New South Wales, Australia</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +61 451180501</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> arthurleonard05225@gmail.com</p>
     </div>
     <div class="col-sm-7 slideanim">
+      <form name="contact-to-google-sheet">
       <div class="row">
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          <input class="form-control" id="name" name="Name" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          <input class="form-control" id="email" name="Email" placeholder="Email" type="email" required>
         </div>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <textarea class="form-control" id="comments" name="Comment" placeholder="Comment" rows="5"></textarea><br>
       <div class="row">
         <div class="col-sm-12 form-group">
+          <select name="State">
+            <option>NSW</option>
+            <option>VIC</option>
+            <option>WA</option>
+            <option>QLD</option>
+            <option>NT</option>
+            <option>CT</option>
+          </select>
           <button class="btn btn-default pull-right" type="submit">Send</button>
         </div>
       </div>
+      </form>
+      <a href="https://docs.google.com/spreadsheets/d/1FdGXBWErc3bKPVSZDsMfwpi9f3esHxsCvx8uaES-mbI/edit?usp=sharing" target="_blank">
+        <button class="btn btn-default pull-right"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;Check Register</button></a>
     </div>
   </div>
 </div>
@@ -753,6 +765,10 @@
   const form = document.forms['submit-to-google-sheet']
   const msg = document.getElementById("msg")  
 
+  const scriptURL2='https://script.google.com/macros/s/AKfycbzPOt5m3qVPkHD06Kygun85eDj4MGI5mgPcFwywRYAJFgn0Nh5PgsO8OP1S8OYVdxHA/exec'
+  const form2 = document.forms['contact-to-google-sheet']
+  const msg2 = document.getElementById("msg2")
+
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
@@ -765,5 +781,17 @@
       })
       .catch(error => console.error('Error!', error.message))
   })  
+  form2.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
+      .then(response => {
+          msg2.innerHTML = "<br />Thank you, we will keep in touch!"
+          setTimeout(function(){
+              msg2.innerHTML = "Contact"
+          }, 5000)
+          form2.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
 </script>
 </html>
