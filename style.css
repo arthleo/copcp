@@ -30,11 +30,11 @@ h4 {
   background-color: #f6f6f6;
 }
 .logo-small {
-  color: #877a45;
+  color: #58d19f;
   font-size: 50px;
 }
 .logo {
-  color: #877a45;
+  color: #58d19f;
   font-size: 200px;
 }
 .thumbnail {
@@ -50,13 +50,13 @@ h4 {
 .carousel-control.right,
 .carousel-control.left {
   background-image: none;
-  color: #877a45;
+  color: #58d19f;
 }
 .carousel-indicators li {
-  border-color: #877a45;
+  border-color: #58d19f;
 }
 .carousel-indicators li.active {
-  background-color: #877a45;
+  background-color: #58d19f;
 }
 .item h4 {
   font-size: 19px;
@@ -69,7 +69,7 @@ h4 {
   font-style: normal;
 }
 .panel {
-  border: 1px solid #877a45;
+  border: 1px solid #58d19f;
   border-radius: 0 !important;
   transition: box-shadow 0.5s;
 }
@@ -77,13 +77,13 @@ h4 {
   box-shadow: 5px 0px 40px rgba(0, 0, 0, 0.2);
 }
 .panel-footer .btn:hover {
-  border: 1px solid #877a45;
+  border: 1px solid #58d19f;
   background-color: #fff !important;
-  color: #877a45;
+  color: #58d19f;
 }
 .panel-heading {
   color: #fff !important;
-  background-color: #877a45 !important;
+  background-color: #58d19f !important;
   padding: 25px;
   border-bottom: 1px solid transparent;
   border-top-left-radius: 0px;
@@ -103,12 +103,12 @@ h4 {
 }
 .panel-footer .btn {
   margin: 15px 0;
-  background-color: #877a45;
+  background-color: #58d19f;
   color: #fff;
 }
 .navbar {
   margin-bottom: 0;
-  background-color: #877a45;
+  background-color: #58d19f;
   z-index: 9999;
   border: 0;
   font-size: 12px !important;
@@ -134,7 +134,7 @@ h4 {
 footer .glyphicon {
   font-size: 20px;
   margin-bottom: 20px;
-  color: #877a45;
+  color: #58d19f;
 }
 .slideanim {
   visibility: hidden;
@@ -175,15 +175,15 @@ footer .glyphicon {
 }
 
 .dropdown-menu {
-  background-color: #877a45;
+  background-color: #58d19f;
   }
   .dropdown-menu li.active a {
   color: #fff !important;
-  background-color:#877a45 !important;
+  background-color:#58d19f !important;
   }
   .dropdown-menu li a:hover {
   color: #fff !important;
-  background-color: #877a45 !important;
+  background-color: #58d19f !important;
   }
 
   h2:hover {
@@ -194,11 +194,11 @@ footer .glyphicon {
   }
 
   .glyphicon-user:before {    
-    color: blue;
+    color: rgb(31, 134, 91);
 }
 
 footer.container-fluid {
-  background: linear-gradient(to top, #877a45 0%, #ffccff 100%);
+  background: linear-gradient(to top, #58d19f 0%, #ffccff 100%);
   color:white;
   text-align: center;
 }
