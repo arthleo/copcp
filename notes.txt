@@ -21,3 +21,5 @@ https://www.youtube.com/watch?v=p1QU3kLFPdg                     //how to publish
 https://www.namecheap.com/                                      //buy domain name online
 
 https://www.youtube.com/watch?v=Xd9r2LzLbMU                     // automated invoice in excel
+
+https://www.youtube.com/watch?v=6zFowiTNhqI&list=PLv9Pf9aNgemvM36efLpaHxbkZTGp2pfhx&index=1 // CRUD
